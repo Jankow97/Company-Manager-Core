@@ -13,9 +13,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Infrastructure\Dtos\CompanyController\Delete\" />
-  </ItemGroup>
-
 </Project>
