@@ -12,16 +12,10 @@ namespace CompanyManager.Api
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
-        {
-
-            var webHost = WebHost.CreateDefaultBuilder(args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) => 
+            WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseUrls($"http://localhost:9220")
                 .UseKestrel();
-
-            return webHost;
-
-        }
     }
 }
