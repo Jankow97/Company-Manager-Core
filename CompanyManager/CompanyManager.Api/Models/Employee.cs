@@ -11,6 +11,6 @@ namespace CompanyManager.Api.Models
         public string Name { get; set; }
         public string LastName { get; set; }
         public int BirthDate { get; set; }
-        public Position Position { get; set; }
+        public Position JobTitle { get; set; }
     }
 }
