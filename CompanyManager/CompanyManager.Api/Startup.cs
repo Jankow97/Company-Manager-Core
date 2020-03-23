@@ -31,9 +31,8 @@ namespace CompanyManager.Api
             services.AddMvc();
             services.AddDbContext<CompanyDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("CompanyManagerDb"));
+                options.UseSqlServer(Configuration.GetConnectionString("CompanyDbConnection"));
             });
-            var str = Configuration.GetSection("Logging");
         }
 
         public void Configure(
