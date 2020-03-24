@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CompanyManager.Api.Migrations
 {
     [DbContext(typeof(CompanyDbContext))]
-    [Migration("20200323213818_Create-Tables-Companies-Employees")]
-    partial class CreateTablesCompaniesEmployees
+    [Migration("20200323224025_Initial-Create-Companies-Employees-Tables")]
+    partial class InitialCreateCompaniesEmployeesTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,7 +43,7 @@ namespace CompanyManager.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BirthDate");
+                    b.Property<DateTime>("BirthDate");
 
                     b.Property<long?>("CompanyId");
 

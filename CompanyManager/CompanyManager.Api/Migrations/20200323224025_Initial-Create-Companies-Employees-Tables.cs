@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CompanyManager.Api.Migrations
 {
-    public partial class CreateTablesCompaniesEmployees : Migration
+    public partial class InitialCreateCompaniesEmployeesTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,7 +30,7 @@ namespace CompanyManager.Api.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
                     LastName = table.Column<string>(nullable: false),
-                    BirthDate = table.Column<int>(nullable: false),
+                    BirthDate = table.Column<DateTime>(nullable: false),
                     JobTitle = table.Column<int>(nullable: false),
                     CompanyId = table.Column<long>(nullable: true)
                 },

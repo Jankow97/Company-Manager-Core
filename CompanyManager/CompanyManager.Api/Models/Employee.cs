@@ -15,7 +15,7 @@ namespace CompanyManager.Api.Models
         [Required]
         public string LastName { get; set; }
         [Required]
-        public int BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         [Required]
         public Position JobTitle { get; set; }
     }

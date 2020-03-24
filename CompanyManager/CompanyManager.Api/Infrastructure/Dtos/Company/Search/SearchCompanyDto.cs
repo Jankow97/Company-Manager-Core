@@ -7,8 +7,8 @@ namespace CompanyManager.Api.Infrastructure.Dtos.Company.Search
     public class SearchCompanyDto
     {
         public string Keyword { get; set; }
-        public DateTime EmployeeDateOfBirthFrom { get; set; }
-        public DateTime EmployeeDateOfBirthTo { get; set; }
+        public DateTime? EmployeeDateOfBirthFrom { get; set; }
+        public DateTime? EmployeeDateOfBirthTo { get; set; }
         public List<Position> EmployeeJobTitles { get; set; }
     }
 }
