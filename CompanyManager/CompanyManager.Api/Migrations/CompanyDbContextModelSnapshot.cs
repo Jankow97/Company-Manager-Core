@@ -41,7 +41,7 @@ namespace CompanyManager.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BirthDate");
+                    b.Property<DateTime>("BirthDate");
 
                     b.Property<long?>("CompanyId");
 

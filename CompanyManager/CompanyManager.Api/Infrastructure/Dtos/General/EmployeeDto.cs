@@ -13,7 +13,7 @@ namespace CompanyManager.Api.Infrastructure.Dtos.General
         [Required]
         public string LastName { get; set; }
         [Required]
-        public int BirthDate { get; set; }
+        public string BirthDate { get; set; }
         [Required]
         public Position JobTitle { get; set; }
     }
