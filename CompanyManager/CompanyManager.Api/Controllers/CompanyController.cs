@@ -78,11 +78,17 @@ namespace CompanyManager.Api.Controllers
                 if (searchCompanyDto.EmployeeJobTitles != null)
                 {
                     result = result.Union(dbContext.Companies.Where(x =>
-                        x.Employees.Any(e =>
-                            searchCompanyDto.EmployeeJobTitles.Contains(e.JobTitle))));
+                        x.Employees.Any(e => searchCompanyDto.EmployeeJobTitles.Contains(e.JobTitle) )));
                 }
 
-                var returnObject = result.ToList();
+                List<Company> returnObject = new List<Company>();
+
+                foreach (var comp in result)
+                {
+                    returnObject.Add(comp);
+                    returnObject.Last().Employees = new List<Employee>();
+                    returnObject.Last().Employees = dbContext.Employees.Where(x => comp.Employees.Contains(x)).ToList();
+                }
 
                 return Ok(returnObject);
             }
